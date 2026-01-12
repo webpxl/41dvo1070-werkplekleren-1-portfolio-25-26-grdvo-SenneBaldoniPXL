@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,11 +18,16 @@
             <span class="profile-name">Senne Baldoni</span>
         </div>
 
-        <nav class="nav-links">
+        <button class="menu-toggle" id="menu-btn">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <nav class="nav-links" id="nav-menu">
             <a href="#home">Home</a>
             <a href="#skills">Skills</a>
             <a href="#opleidingen">Opleidingen</a>
             <a href="#talen">Talen</a>
+            <a href="#projects">Projecten</a>
             <a href="#contact" class="btn-accent">Contact</a>
         </nav>
     </div>
@@ -35,18 +39,14 @@
             <div class="hero-text">
                 <h1>Hallo, ik ben <span class="gradient-text">Senne!</span></h1>
                 <p class="hero-subtitle">Een enthousiaste Develop & Design student aan PXL.</p>
-                <p class="hero-description">
-                    Met passie voor coding, creatief design en technologie.
-                </p>
-
+                <p class="hero-description">Met passie voor coding, creatief design en technologie.</p>
                 <div class="social-icons">
-                    <a href="#" class="icon-box"><i class="bi bi-youtube"></i></a>
-                    <a href="#" class="icon-box"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="icon-box"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="icon-box"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@cyloxdev" target="_blank" class="icon-box"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.facebook.com/people/Senne-Baldoni/pfbid02E2EKitDmRStbv6DA9bkNcEzXAN1rq2vokCN1iRAnunQv313CdV3J4HecPHBBJnEkl/" target="_blank" class="icon-box"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/sennebal/" target="_blank" class="icon-box"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/senne-baldoni-3254b7349/" target="_blank" class="icon-box"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
-
             <div class="hero-image-container">
                 <div class="image-glass-frame">
                     <img src="./img/profile.jpg" alt="Senne Baldoni" class="hero-img">
@@ -61,11 +61,8 @@
                 <div class="info-card glass-card-light">
                     <i class="bi bi-person-fill info-icon"></i>
                     <h2>Over mij</h2>
-                    <p>Ik ben Senne Baldoni, een student aan PXL met een passie voor technologie en creatieve projecten.
-                        Ik hou van het combineren van codering met modern design om unieke digitale ervaringen te
-                        creëren.</p>
+                    <p>Ik ben Senne Baldoni, student aan PXL. Ik koos voor de opleiding Digitale Vormgeving omdat ik gefascineerd ben door de combinatie van creatieve expressie en technische logica. Ik ben een goede designer en programmeur omdat ik oog heb voor esthetiek zonder de functionele code uit het oog te verliezen; ik streef altijd naar een perfecte gebruikerservaring.</p>
                 </div>
-
                 <div class="info-card glass-card-light">
                     <i class="bi bi-geo-alt-fill info-icon"></i>
                     <h2>Woonplaats</h2>
@@ -86,7 +83,6 @@
     <section id="skills" class="skills-section">
         <div class="container">
             <h2 class="section-title">Mijn <span class="gradient-text">Vaardigheden</span></h2>
-
             <div class="skills-grid">
                 <div class="skill-card glass-card-light">
                     <div class="skill-header">
@@ -99,7 +95,6 @@
                         <li><i class="bi bi-check2-circle"></i> JavaScript</li>
                     </ul>
                 </div>
-
                 <div class="skill-card glass-card-light">
                     <div class="skill-header">
                         <i class="bi bi-palette-fill"></i>
@@ -112,7 +107,6 @@
                         <li><i class="bi bi-check2-circle"></i> After Effects</li>
                     </ul>
                 </div>
-
                 <div class="skill-card glass-card-light">
                     <div class="skill-header">
                         <i class="bi bi-lightning-charge-fill"></i>
@@ -132,7 +126,6 @@
     <section id="opleidingen" class="education-section">
         <div class="container">
             <h2 class="section-title">Mijn <span class="gradient-text">Opleidingen</span></h2>
-
             <div class="timeline">
                 <div class="timeline-item glass-card-light">
                     <div class="timeline-dot"></div>
@@ -143,7 +136,6 @@
                         <p class="description">Focus op webdesign, UI/UX en front-end development.</p>
                     </div>
                 </div>
-
                 <div class="timeline-item glass-card-light">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2024 - 2025</div>
@@ -152,7 +144,6 @@
                         <p class="school">PXL Hasselt</p>
                     </div>
                 </div>
-
                 <div class="timeline-item glass-card-light highlight-card">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2022 - 2024</div>
@@ -161,7 +152,6 @@
                         <p class="school">Atheneum Tongeren</p>
                     </div>
                 </div>
-
                 <div class="timeline-item glass-card-light">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2021 - 2022</div>
@@ -170,7 +160,6 @@
                         <p class="school">Atheneum Borgloon</p>
                     </div>
                 </div>
-
                 <div class="timeline-item glass-card-light">
                     <div class="timeline-dot"></div>
                     <div class="timeline-date">2019 - 2021</div>
@@ -186,7 +175,6 @@
     <section id="talen" class="languages-section">
         <div class="container">
             <h2 class="section-title">Talen<span class="gradient-text">kennis</span></h2>
-
             <div class="languages-grid">
                 <div class="language-card glass-card-light">
                     <div class="lang-info">
@@ -197,7 +185,6 @@
                         <div class="progress-fill" style="width: 100%;"></div>
                     </div>
                 </div>
-
                 <div class="language-card glass-card-light">
                     <div class="lang-info">
                         <span class="lang-name">Engels</span>
@@ -207,7 +194,6 @@
                         <div class="progress-fill" style="width: 80%;"></div>
                     </div>
                 </div>
-
                 <div class="language-card glass-card-light">
                     <div class="lang-info">
                         <span class="lang-name">Italiaans</span>
@@ -217,7 +203,6 @@
                         <div class="progress-fill" style="width: 50%;"></div>
                     </div>
                 </div>
-
                 <div class="language-card glass-card-light">
                     <div class="lang-info">
                         <span class="lang-name">Frans</span>
@@ -231,44 +216,63 @@
         </div>
     </section>
 
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Mijn <span class="gradient-text">Projecten</span></h2>
+            <div class="projects-grid">
+                <article class="project-card glass-card-light">
+                    <img src="./img/portfolio.png" alt="Web Project" class="project-img">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p class="project-meta">Vak: WPL 1 | Rol: Full Stack Developer</p>
+                        <p>Voor dit vak bouwde ik een responsive portfolio met Glassmorphism effecten.</p>
+                    </div>
+                </article>
+                <article class="project-card glass-card-light">
+                    <img src="./img/takeawaywebsite.png" alt="Design Project" class="project-img">
+                    <div class="project-info">
+                        <h3>Takeaway Website</h3>
+                        <p class="project-meta">Vak: Scripting | Rol: Full Stack Developer</p>
+                        <p>Responsive takeaway-website gebouwd met HTML, CSS en JavaScript voor het scriptingexamen.</p>
+                    </div>
+                </article>
+                <article class="project-card glass-card-light">
+                    <img src="./img/workoutimg.png" alt="Fitness Program" class="project-img">
+                    <div class="project-info">
+                        <h3>Personal Coaching Systeem</h3>
+                        <p class="project-meta">Persoonlijk Project | Rol: Coach & Organisator</p>
+                        <p>Krachttraining-schema's en voedingsbegeleiding op basis van anatomische kennis.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <section id="overige" class="extra-info-section">
         <div class="container">
             <h2 class="section-title">Overige <span class="gradient-text">Informatie</span></h2>
-
             <div class="extra-info-card glass-card-light">
                 <div class="info-row">
-                    <div class="info-icon-box">
-                        <i class="bi bi-car-front-fill"></i>
-                    </div>
+                    <div class="info-icon-box"><i class="bi bi-car-front-fill"></i></div>
                     <div class="info-text">
                         <h3>Rijbewijs</h3>
                         <p>In het bezit van rijbewijs categorie AM en B</p>
                     </div>
                 </div>
-
                 <hr class="info-divider">
-
                 <div class="info-row">
-                    <div class="info-icon-box">
-                        <i class="bi bi-briefcase-fill"></i>
-                    </div>
+                    <div class="info-icon-box"><i class="bi bi-briefcase-fill"></i></div>
                     <div class="info-text">
                         <h3>Werkervaring</h3>
                         <p>Horeca, Productie & Winkelbediende</p>
                     </div>
                 </div>
-
                 <hr class="info-divider">
-
                 <div class="info-row">
-                    <div class="info-icon-box">
-                        <i class="bi bi-people-fill"></i>
-                    </div>
+                    <div class="info-icon-box"><i class="bi bi-people-fill"></i></div>
                     <div class="info-text">
                         <h3>Persoonlijkheid</h3>
-                        <p>Communicatief sterk en sociaal ingesteld; ik floreer in een teamgerichte werkomgeving. Mijn
-                            proactieve houding en behulpzaamheid maken mij een betrouwbare partner in zowel creatieve
-                            als operationele projecten.</p>
+                        <p>Communicatief sterk, sociaal ingesteld en een proactieve teamplayer.</p>
                     </div>
                 </div>
             </div>
@@ -278,49 +282,37 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title">Neem <span class="gradient-text">Contact Op</span></h2>
-
             <div class="contact-card glass-card-light">
                 <div class="info-row">
-                    <div class="info-icon-box">
-                        <i class="bi bi-telephone-fill"></i>
-                    </div>
+                    <div class="info-icon-box"><i class="bi bi-telephone-fill"></i></div>
                     <div class="info-text">
                         <h3>Telefoon</h3>
-                        <p>+32 000 00 00 00</p>
+                        <p>+32 485 55 03 97</p>
                     </div>
                 </div>
-
                 <hr class="info-divider">
-
                 <div class="info-row">
-                    <div class="info-icon-box">
-                        <i class="bi bi-envelope-fill"></i>
-                    </div>
+                    <div class="info-icon-box"><i class="bi bi-envelope-fill"></i></div>
                     <div class="info-text">
                         <h3>E-mail</h3>
                         <p>senne.baldoni@student.pxl.be</p>
                     </div>
                 </div>
-
                 <hr class="info-divider">
-
                 <div class="info-row">
-                    <div class="info-icon-box">
-                        <i class="bi bi-link-45deg"></i>
-                    </div>
+                    <div class="info-icon-box"><i class="bi bi-link-45deg"></i></div>
                     <div class="info-text">
                         <h3>Social Media</h3>
                         <div class="contact-socials">
-                            <a href="#" class="btn-social">YouTube</a>
-                            <a href="#" class="btn-social">Facebook</a>
-                            <a href="#" class="btn-social">Instagram</a>
+                            <a href="https://www.youtube.com/@cyloxdev" target="_blank" class="btn-social">YouTube</a>
+                            <a href="https://www.facebook.com/people/Senne-Baldoni/pfbid02E2EKitDmRStbv6DA9bkNcEzXAN1rq2vokCN1iRAnunQv313CdV3J4HecPHBBJnEkl/" target="_blank" class="btn-social">Facebook</a>
+                            <a href="https://www.instagram.com/sennebal/" target="_blank" class="btn-social">Instagram</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 </main>
 
 <footer class="glass-footer">
