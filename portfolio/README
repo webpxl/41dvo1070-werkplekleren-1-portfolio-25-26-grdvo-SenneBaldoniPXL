@@ -1,0 +1,12 @@
+# Portfolio WPL1 - Senne Baldoni
+
+## Gebruikte Bronnen & Tools
+* **AI-Tool:** Gemini (Google) - Gebruikt voor code-optimalisatie, CSS Glassmorphism styling en tekstredactie.
+* **Icons:** [Bootstrap Icons](https://icons.getbootstrap.com/)
+* **Fonts:** [Google Fonts (Poppins)](https://fonts.google.com/)
+* **Afbeeldingen:** Eigen foto's en rechtenvrije screenshots.
+
+## Technische keuzes
+* Gebruik van semantische HTML5 (Header, Main, Section, Article, Footer).
+* Responsive design met CSS Grid en Media Queries.
+* Mobile menu aangestuurd door Plain JavaScript.
