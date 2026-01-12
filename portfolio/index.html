@@ -2,23 +2,318 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflectie WPL1 | Senne Baldoni</title>
-    <link rel="stylesheet" href="../style.css"> </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0a192f;
+            --accent: #00d4ff;
+            --bg-light: #f8fafc;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            background-image: radial-gradient(circle at top right, rgba(0, 212, 255, 0.1), transparent 800px);
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-blue);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 24px; }
+
+        /* --- ANIMATIE STYLES --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Titels */
+        .main-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--dark-blue), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 50px;
+        }
+
+        .section-box {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 30px;
+            padding: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease;
+        }
+
+        .section-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* --- APART VAK VOOR BRUGBOUWER --- */
+        .bridge-highlight-box {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(0, 212, 255, 0.05));
+            border-left: 6px solid var(--accent);
+            padding: 30px;
+            border-radius: 0 20px 20px 0;
+            margin: 25px 0;
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.08);
+        }
+
+        .bridge-highlight-box i {
+            font-size: 2rem;
+            color: var(--accent);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .bridge-highlight-box p {
+            font-size: 1.15rem;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--dark-blue);
+        }
+
+        /* --- EINDREFLECTIE STYLING --- */
+        .reflectie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .status-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+            border-left: 6px solid transparent;
+            transition: transform 0.3s ease;
+        }
+
+        .status-card:hover {
+            transform: scale(1.02);
+        }
+
+        .status-card.plus { border-left-color: var(--success); }
+        .status-card.min { border-left-color: var(--warning); }
+
+        .status-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+
+        .list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .list-item i {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .label {
+            font-weight: 700;
+            min-width: 140px;
+            display: inline-block;
+            color: var(--dark-blue);
+        }
+
+        .content {
+            flex: 1;
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: var(--dark-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover {
+            background: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .reflectie-grid { grid-template-columns: 1fr; }
+            .label { min-width: auto; display: block; margin-bottom: 5px; }
+        }
+    </style>
+</head>
 <body>
-<main class="container" style="padding: 100px 20px;">
-    <h1 class="gradient-text">Reflectie & Situering</h1>
 
-    <section class="glass-card-light" style="margin-top: 30px;">
-        <h2>Situering binnen Profiel DVO</h2>
-        <p>Schrijf hier hoe jij jezelf ziet als Digitale Vormgever...</p>
+<main class="container">
+    <header class="reveal">
+        <h1 class="main-title">Reflectie & Situering</h1>
+    </header>
+
+    <section class="section-box reveal">
+        <h2><i class="bi bi-compass" style="color: var(--accent);"></i> Situering binnen Profiel DVO</h2>
+        <p style="font-size: 1.1rem; color: #4b5563;">
+            Als student Digitale Vormgeving aan Hogeschool PXL positioneer ik mijzelf op het snijvlak van creativiteit en techniek.
+        </p>
+
+        <div class="bridge-highlight-box">
+            <i class="bi bi-gear-wide-connected"></i>
+            <p>
+                "Ik zie mijzelf als een 'brugbouwer': ik geniet van het artistieke proces in Photoshop, maar vind pas echt voldoening als ik die ontwerpen vertaal naar gestructureerde, semantische code."
+            </p>
+        </div>
+
+        <p style="font-size: 1.1rem; color: #4b5563;">
+            Mijn passie voor fitness vertaalt zich naar mijn werkstijl: discipline, precisie en een constante drang naar optimalisatie in elk project dat ik aanpak.
+        </p>
     </section>
 
-    <section class="glass-card-light" style="margin-top: 30px;">
-        <h2>Eindreflectie WPL1</h2>
-        <p>Beschrijf hier je ervaringen van het afgelopen semester...</p>
+    <section class="section-box reveal">
+        <h2><i class="bi bi-journal-check" style="color: var(--accent);"></i> Eindreflectie WPL1</h2>
+        <p style="margin-bottom: 30px; color: #4b5563;">
+            Dit semester was een steile leercurve waarin ik de fundamenten van webdevelopment heb leren beheersen. Hieronder staan mijn belangrijkste leerpunten en successen:
+        </p>
+
+        <div class="reflectie-grid">
+            <div class="status-card plus">
+                <h3 style="color: var(--success);"><i class="bi bi-plus-circle-fill"></i> Sterke Punten</h3>
+
+                <div class="list-item">
+                    <i class="bi bi-check2-square" style="color: var(--success);"></i>
+                    <div>
+                        <span class="label">Technische Groei:</span>
+                        <span class="content">Beheersing van moderne CSS-architectuur (Grid/Flexbox).</span>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <i class="bi bi-palette" style="color: var(--success);"></i>
+                    <div>
+                        <span class="label">Consistent Design:</span>
+                        <span class="content">Succesvolle implementatie van de 'Glassmorphism' stijl op de hele site.</span>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <i class="bi bi-bug" style="color: var(--success);"></i>
+                    <div>
+                        <span class="label">Debuggen:</span>
+                        <span class="content">Snel oplossen van layout-fouten via Developer Tools.</span>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <i class="bi bi-git" style="color: var(--success);"></i>
+                    <div>
+                        <span class="label">Versiebeheer:</span>
+                        <span class="content">GitHub is een vast onderdeel van mijn workflow geworden.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-card min">
+                <h3 style="color: var(--warning);"><i class="bi bi-exclamation-triangle-fill"></i> Leerpunten</h3>
+
+                <div class="list-item">
+                    <i class="bi bi-hourglass-split" style="color: var(--warning);"></i>
+                    <div>
+                        <span class="label">Time Management:</span>
+                        <span class="content">Minder tijd verliezen aan details in de beginfase.</span>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <i class="bi bi-calendar-check" style="color: var(--warning);"></i>
+                    <div>
+                        <span class="label">Planning:</span>
+                        <span class="content">Eerst wireframes uitwerken in Figma voordat ik begin met code.</span>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <i class="bi bi-code-slash" style="color: var(--warning);"></i>
+                    <div>
+                        <span class="label">JS Logica:</span>
+                        <span class="content">Verdiepen in complexere functies en herbruikbare scripts.</span>
+                    </div>
+                </div>
+
+                <div class="list-item">
+                    <i class="bi bi-lightning" style="color: var(--warning);"></i>
+                    <div>
+                        <span class="label">Asset Optimalisatie:</span>
+                        <span class="content">Afbeeldingen beter comprimeren voor snellere laadtijden.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <a href="../index.html" class="btn-social" style="display: inline-block; margin-top: 20px;">Terug naar Portfolio</a>
+    <footer class="reveal" style="text-align: center;">
+        <a href="../index.html" class="btn-back">
+            <i class="bi bi-arrow-left"></i> Terug naar Portfolio
+        </a>
+    </footer>
 </main>
+
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    window.addEventListener("load", reveal);
+</script>
+
 </body>
 </html>
