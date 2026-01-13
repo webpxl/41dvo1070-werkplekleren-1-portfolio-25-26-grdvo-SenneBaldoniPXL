@@ -103,6 +103,63 @@
             color: var(--dark-blue);
         }
 
+        /* --- LEERDOELEN STYLING --- */
+        .olr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .olr-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            border-bottom: 4px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .olr-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--dark-blue);
+        }
+
+        .olr-card p {
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        /* --- DRIELEDIGE REFLECTIE STYLING --- */
+        .extra-reflectie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .reflectie-card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            border-top: 4px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .reflectie-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .reflectie-card p {
+            font-size: 0.95rem;
+            color: #4b5563;
+        }
+
         /* --- EINDREFLECTIE STYLING --- */
         .reflectie-grid {
             display: grid;
@@ -179,6 +236,39 @@
             transform: translateX(-5px);
         }
 
+        /* --- PDF DOWNLOAD BUTTON STYLE --- */
+        .pdf-section {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .btn-pdf {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 18px 35px;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 700;
+            border: 2px solid var(--success);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(5px);
+        }
+
+        .btn-pdf:hover {
+            background: var(--success);
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-pdf i {
+            font-size: 1.4rem;
+        }
+
         @media (max-width: 768px) {
             .reflectie-grid { grid-template-columns: 1fr; }
             .label { min-width: auto; display: block; margin-bottom: 5px; }
@@ -208,6 +298,50 @@
         <p style="font-size: 1.1rem; color: #4b5563;">
             Mijn passie voor fitness vertaalt zich naar mijn werkstijl: discipline, precisie en een constante drang naar optimalisatie in elk project dat ik aanpak.
         </p>
+    </section>
+
+    <section class="section-box reveal">
+        <h2><i class="bi bi-list-stars" style="color: var(--accent);"></i> Leerdoelen Digitale Vormgever</h2>
+        <p style="margin-bottom: 20px; color: #4b5563;">Hieronder reflecteer ik kort op mijn voortgang binnen de vier rollen van de opleiding, gekoppeld aan de 12 leerdoelen (OLR's).</p>
+
+        <div class="olr-grid">
+            <div class="olr-card">
+                <h3>1. Creatieve Vormgever</h3>
+                <p>Ik heb geleerd vragen te interpreteren en voorontwerpen te maken (OLR 1). Dit zie je terug in mijn <strong>Figma-design</strong> waar ik gebruiksvriendelijke interfaces heb ontworpen (OLR 2 & 3).</p>
+            </div>
+            <div class="olr-card">
+                <h3>2. Front-end Ontwikkelaar</h3>
+                <p>Ik implementeer ontwerpen naar werkende toepassingen (OLR 6) met moderne code zoals in mijn <strong>Takeaway project</strong>. Ik werk projectmatig en onderbouw mijn technische keuzes (OLR 7).</p>
+            </div>
+            <div class="olr-card">
+                <h3>3. Communicator</h3>
+                <p>Ik communiceer correct met vakjargon zoals 'Flexbox' en 'UI/UX' (OLR 8). In mijn portfolio rapporteer ik transparant over mijn proces en keuzes naar de opdrachtgever toe.</p>
+            </div>
+            <div class="olr-card">
+                <h3>4. Levenslang Lerende</h3>
+                <p>Door deze reflectie toon ik zelfkennis (OLR 10). Ik werk aan mijn leerpunten en hanteer de juiste privacy-richtlijnen voor een professionele online aanwezigheid (OLR 11).</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-box reveal">
+        <h2><i class="bi bi-journal-text" style="color: var(--accent);"></i> Persoonlijke Ontwikkeling</h2>
+        <p style="margin-bottom: 20px; color: #4b5563;">Verdiepende reflectie op mijn groeiproces en toekomstvisie.</p>
+
+        <div class="extra-reflectie-grid">
+            <div class="reflectie-card">
+                <h3><i class="bi bi-target" style="color: var(--success);"></i> AIM-reflectie</h3>
+                <p>Gedurende WPL1 heb ik via de Agile Insight Mentor methodiek geleerd dat mijn enthousiasme voor front-end mijn grootste drijfveer is. Het positief verrassende was de voldoening van een bugvrije layout, terwijl de complexiteit van JS mijn grootste uitdaging bleef.</p>
+            </div>
+            <div class="reflectie-card">
+                <h3><i class="bi bi-rocket-takeoff" style="color: var(--warning);"></i> Wat naar WPL2?</h3>
+                <p>In het volgende semester neem ik mijn gestructureerde workflow mee. Ik wil nog meer inzetten op de wireframing-fase in Figma om het programmeerproces te versnellen en mezelf uitdagen met complexere JavaScript interacties.</p>
+            </div>
+            <div class="reflectie-card">
+                <h3><i class="bi bi-stars" style="color: var(--accent);"></i> Reflectie X-factor</h3>
+                <p>Mijn X-factor is de discipline die ik haal uit bodybuilding: het constant streven naar 'marginal gains'. Dit vertaalt zich in mijn code naar uiterste precisie en de onvermoeibare wil om elk pixel-detail op mijn website perfect te krijgen.</p>
+            </div>
+        </div>
     </section>
 
     <section class="section-box reveal">
@@ -290,6 +424,12 @@
             </div>
         </div>
     </section>
+
+    <div class="pdf-section reveal">
+        <a href="WPL1_Eindreflectie_Senne_Baldoni.pdf" target="_blank" class="btn-pdf">
+            <i class="bi bi-file-earmark-pdf-fill"></i> Download Volledige Eindreflectie (PDF)
+        </a>
+    </div>
 
     <footer class="reveal" style="text-align: center;">
         <a href="../index.html" class="btn-back">
