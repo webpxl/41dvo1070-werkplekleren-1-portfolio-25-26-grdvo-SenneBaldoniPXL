@@ -1,12 +1,35 @@
-# Portfolio WPL1 - Senne Baldoni
+# Portfolio Werkplekleren 1 (WPL1) — Senne Baldoni
 
-## Gebruikte Bronnen & Tools
-* **AI-Tool:** Gemini (Google) - Gebruikt voor code-optimalisatie, CSS Glassmorphism styling en tekstredactie.
-* **Icons:** [Bootstrap Icons](https://icons.getbootstrap.com/)
-* **Fonts:** [Google Fonts (Poppins)](https://fonts.google.com/)
-* **Afbeeldingen:** Eigen foto's en rechtenvrije screenshots.
+Welkom op de GitHub-repository van mijn digitale portfolio voor het vak **Werkplekleren 1 (WPL1)** binnen de opleiding *Graduaat Digitale Vormgeving* aan **Hogeschool PXL**.
 
-## Technische keuzes
-* Gebruik van semantische HTML5 (Header, Main, Section, Article, Footer).
-* Responsive design met CSS Grid en Media Queries.
-* Mobile menu aangestuurd door Plain JavaScript.
+---
+
+## 🌐 Live Website
+De website is live gepubliceerd en te bekijken via:
+👉 **[Bekijk mijn live portfolio](https://sennebaldonipxl.github.io/41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-SenneBaldoniPXL/)** *(of vervang dit door je exacte GitHub Pages / Netlify URL)*
+
+---
+
+## 🛠️ Technische Vereisten & Keuzes
+* **Semantische HTML5-structuur:** Gestructureerde en toegankelijke opbouw met `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` en `<footer>`.
+* **Moderne, Responsive CSS3:** Volledig op maat gemaakt met CSS Grid, Flexbox, CSS Custom Properties (variabelen) en media queries voor mobiel, tablet en desktop (zonder frameworks zoals Bootstrap of Tailwind).
+* **Vanilla JavaScript:**
+  * Mobiel hamburger-navigatiemenu met toggle-functionaliteit en auto-close bij klik.
+  * Dynamische interactieve cursor ambient glow tracker.
+  * Geanimeerde vaardigheidsmeters via DOM-manipulatie.
+* **Privacyrichtlijnen:** Direct gelinkt in de footer conform de richtlijnen (`privacy.txt`).
+* **Versiebeheer:** Gestructureerde Git-workflow met duidelijke commits via GitHub Classroom.
+
+---
+
+## 🤖 Gebruikte AI-Tools
+Conform de richtlijnen van de opdracht werd er gebruikgemaakt van de volgende AI-ondersteuning:
+* **Gemini (Google):** Ingeschakeld als sparringpartner voor code-optimalisatie, het verfijnen van de responsieve CSS-architectuur, micro-interacties en tekstredactie voor projectbeschrijvingen en reflecties.
+
+---
+
+## 📚 Bronvermelding & Externe Materialen
+* **Iconen:** [Bootstrap Icons](https://icons.getbootstrap.com/) (v1.11.1)
+* **Typografie:** [Google Fonts](https://fonts.google.com/) (*Plus Jakarta Sans* en *Inter*)
+* **Afbeeldingen:** Alle gebruikte beeldmaterialen zijn eigen foto's, screenshots van eigen projecten en rechtenvrij materiaal.
+* **Code-architectuur & Documentatie:** [MDN Web Docs](https://developer.mozilla.org/) voor HTML5 & CSS Grid documentatie.
