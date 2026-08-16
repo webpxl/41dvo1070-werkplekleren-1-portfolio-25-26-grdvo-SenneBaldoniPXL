@@ -3,323 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Senne Baldoni</title>
+    <title>Senne Baldoni — Digital Designer & Front-End Developer</title>
 
+    <!-- Bootstrap Icons & Google Fonts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="./img/face.jpg">
 </head>
 <body>
 
-<header class="sticky-nav">
-    <div class="nav-content">
-        <div class="profile-box">
-            <img src="./img/face.jpg" alt="Senne Baldoni" class="profile-pic">
-            <span class="profile-name">Senne Baldoni</span>
-        </div>
+<!-- STICKY NAVBAR -->
+<header class="header">
+    <div class="nav-container">
+        <a href="#home" class="brand-logo">
+            <span class="brand-initial">S.</span> Baldoni
+        </a>
 
-        <button class="menu-toggle" id="menu-btn">
+        <button class="mobile-toggle" id="menu-btn" aria-label="Menu openen">
             <i class="bi bi-list"></i>
         </button>
 
-        <nav class="nav-links" id="nav-menu">
-            <a href="#home">Home</a>
-            <a href="#skills">Skills</a>
-            <a href="#opleidingen">Opleidingen</a>
-            <a href="#talen">Talen</a>
-            <a href="#projects">Projecten</a>
-            <a href="#contact" class="btn-accent">Contact</a>
+        <nav class="nav-menu" id="nav-menu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">Over Mij</a>
+            <a href="#projects" class="nav-link">Projecten</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#special" class="nav-link">Buiten het Scherm</a>
+            <a href="./portfolio/index.html" class="nav-link">Reflectie</a>
+            <a href="#contact" class="btn btn-nav">Contact</a>
         </nav>
     </div>
 </header>
 
 <main>
-    <section id="home" class="hero-container">
-        <div class="hero-content">
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+
+            <!-- Linkerzijde: Foto met floating skill pills -->
+            <div class="hero-visual">
+                <div class="photo-wrapper">
+                    <img src="./img/face.jpg" alt="Senne Baldoni" class="photo-img">
+
+                    <!-- Floating Pills -->
+                    <div class="floating-pill pill-top-left"><i class="bi bi-vector-pen"></i> Figma</div>
+                    <div class="floating-pill pill-top-right"><i class="bi bi-filetype-psd"></i> Photoshop</div>
+                    <div class="floating-pill pill-bottom-left"><i class="bi bi-filetype-html"></i> HTML / CSS</div>
+                    <div class="floating-pill pill-bottom-right"><i class="bi bi-filetype-js"></i> JavaScript</div>
+                </div>
+            </div>
+
+            <!-- Rechterzijde: Introductie en CTA's -->
             <div class="hero-text">
-                <h1>Hallo, ik ben <span class="gradient-text">Senne!</span></h1>
-                <p class="hero-subtitle">Een enthousiaste Develop & Design student aan PXL.</p>
-                <p class="hero-description">Met passie voor coding, creatief design en technologie.</p>
-                <div class="social-icons">
-                    <a href="https://www.youtube.com/@cyloxdev" target="_blank" class="icon-box"><i class="bi bi-youtube"></i></a>
-                    <a href="https://www.facebook.com/people/Senne-Baldoni/pfbid02E2EKitDmRStbv6DA9bkNcEzXAN1rq2vokCN1iRAnunQv313CdV3J4HecPHBBJnEkl/" target="_blank" class="icon-box"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.instagram.com/sennebal/" target="_blank" class="icon-box"><i class="bi bi-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/senne-baldoni-3254b7349/" target="_blank" class="icon-box"><i class="bi bi-linkedin"></i></a>
+                <div class="badge-status">
+                    <span class="status-dot"></span> Student Digitale Vormgeving • Hogeschool PXL
+                </div>
+
+                <h1 class="hero-title">
+                    Hi, ik ben <span class="highlight-text">Senne Baldoni</span>
+                </h1>
+
+                <p class="hero-lead">
+                    De brug tussen creatief visueel ontwerp en schone, werkende front-end code.
+                </p>
+
+                <p class="hero-tagline">
+                    <em>"Mijn aanpak? Doordacht in UX, strak in UI en modulair in code."</em>
+                </p>
+
+                <div class="hero-meta">
+                    <span><i class="bi bi-geo-alt"></i> Borgloon / Hasselt, België</span>
+                    <span><i class="bi bi-mortarboard"></i> Graduaat Digitale Vormgeving</span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Bekijk projecten <i class="bi bi-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary">Contact opnemen</a>
                 </div>
             </div>
-            <div class="hero-image-container">
-                <div class="image-glass-frame">
-                    <img src="./img/face.jpg" alt="Senne Baldoni" class="hero-img">
-                </div>
-            </div>
+
         </div>
     </section>
 
-    <section id="info-cards" class="info-section">
+    <!-- OVER MIJ SECTIE -->
+    <section id="about" class="section section-light">
         <div class="container">
-            <div class="info-grid">
-                <div class="info-card glass-card-light">
-                    <i class="bi bi-person-fill info-icon"></i>
-                    <h2>Over mij</h2>
-                    <p>Ik ben Senne Baldoni, student aan PXL. Ik koos voor de opleiding Digitale Vormgeving omdat ik gefascineerd ben door de combinatie van creatieve expressie en technische logica. Ik ben een goede designer en programmeur omdat ik oog heb voor esthetiek zonder de functionele code uit het oog te verliezen; ik streef altijd naar een perfecte gebruikerservaring.</p>
-                </div>
-                <div class="info-card glass-card-light">
-                    <i class="bi bi-geo-alt-fill info-icon"></i>
-                    <h2>Woonplaats</h2>
-                    <div class="location-details">
-                        <p><strong>Limburg, België</strong></p>
-                        <p>Tongeren-Borgloon, 3840</p>
-                    </div>
-                    <hr class="card-divider">
-                    <div class="contact-details">
-                        <p><i class="bi bi-telephone-fill"></i> +32 485 55 03 97</p>
-                        <p><i class="bi bi-envelope-fill"></i> senne.baldoni@student.pxl.be</p>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-subtitle">Achtergrond & Visie</span>
+                <h2 class="section-title">Wie ben ik?</h2>
             </div>
-        </div>
-    </section>
 
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">Mijn <span class="gradient-text">Vaardigheden</span></h2>
-            <div class="skills-grid">
-                <div class="skill-card glass-card-light">
-                    <div class="skill-header">
-                        <i class="bi bi-code-slash"></i>
-                        <h3>Web Development</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><i class="bi bi-check2-circle"></i> HTML5</li>
-                        <li><i class="bi bi-check2-circle"></i> CSS3</li>
-                        <li><i class="bi bi-check2-circle"></i> JavaScript</li>
-                    </ul>
+            <div class="about-grid">
+                <div class="about-card main-about">
+                    <h3>Passie voor Vorm & Logica</h3>
+                    <p>
+                        Ik koos voor de opleiding <strong>Digitale Vormgeving aan Hogeschool PXL</strong> omdat ik gefascineerd ben door het kruispunt waar design en technologie samenkomen. Ik wil niet enkel ontwerpen wat er goed uitziet, maar ook begrijpen en bouwen hoe het technisch onder de motorkap functioneert.
+                    </p>
+                    <p>
+                        Mijn kracht ligt in de rol van <em>brugbouwer</em>: van conceptuele wireframes en vector-branding in Illustrator & Figma, tot het omzetten naar responsieve, semantische HTML, CSS en JavaScript.
+                    </p>
                 </div>
-                <div class="skill-card glass-card-light">
-                    <div class="skill-header">
-                        <i class="bi bi-palette-fill"></i>
-                        <h3>Design</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><i class="bi bi-check2-circle"></i> Photoshop</li>
-                        <li><i class="bi bi-check2-circle"></i> Illustrator</li>
-                        <li><i class="bi bi-check2-circle"></i> UI/UX Design</li>
-                        <li><i class="bi bi-check2-circle"></i> After Effects</li>
-                    </ul>
-                </div>
-                <div class="skill-card glass-card-light">
-                    <div class="skill-header">
-                        <i class="bi bi-lightning-charge-fill"></i>
-                        <h3>Fitness & Lifestyle</h3>
-                    </div>
-                    <ul class="skill-list">
-                        <li><i class="bi bi-check2-circle"></i> Bodybuilding</li>
-                        <li><i class="bi bi-check2-circle"></i> Nutrition</li>
-                        <li><i class="bi bi-check2-circle"></i> Strength Training</li>
-                        <li><i class="bi bi-check2-circle"></i> Coaching</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="opleidingen" class="education-section">
-        <div class="container">
-            <h2 class="section-title">Mijn <span class="gradient-text">Opleidingen</span></h2>
-            <div class="timeline">
-                <div class="timeline-item glass-card-light">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025 - Heden</div>
-                    <div class="timeline-content">
-                        <h3>Digitale Vormgeving</h3>
-                        <p class="school">PXL Hasselt</p>
-                        <p class="description">Focus op webdesign, UI/UX en front-end development.</p>
-                    </div>
-                </div>
-                <div class="timeline-item glass-card-light">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2024 - 2025</div>
-                    <div class="timeline-content">
-                        <h3>Lichamelijke Opvoeding & Bewegingsrecreatie</h3>
-                        <p class="school">PXL Hasselt</p>
-                    </div>
-                </div>
-                <div class="timeline-item glass-card-light highlight-card">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2022 - 2024</div>
-                    <div class="timeline-content">
-                        <h3>Lichamelijke Opvoeding <span class="badge">AFGESTUDEERD</span></h3>
-                        <p class="school">Atheneum Tongeren</p>
-                    </div>
-                </div>
-                <div class="timeline-item glass-card-light">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2021 - 2022</div>
-                    <div class="timeline-content">
-                        <h3>STW</h3>
-                        <p class="school">Atheneum Borgloon</p>
-                    </div>
-                </div>
-                <div class="timeline-item glass-card-light">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2019 - 2021</div>
-                    <div class="timeline-content">
-                        <h3>Humane Wetenschappen</h3>
-                        <p class="school">Atheneum Borgloon</p>
+                <div class="about-card highlight-about">
+                    <div class="card-icon"><i class="bi bi-lightning-charge"></i></div>
+                    <h3>Mijn Werkethiek</h3>
+                    <p>
+                        De discipline en precisie die ik ontwikkelde via krachttraining neem ik mee naar softwareontwikkeling: oog voor detail, schone codestructuur en het continu streven naar verbetering.
+                    </p>
+                    <div class="quick-facts">
+                        <div><strong>Woonplaats:</strong> Borgloon</div>
+                        <div><strong>Rijbewijs:</strong> Categorie B & AM</div>
+                        <div><strong>Beschikbaar voor:</strong> Stages & Freelance projecten</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="talen" class="languages-section">
+    <!-- PROJECTEN SECTIE -->
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Talen<span class="gradient-text">kennis</span></h2>
-            <div class="languages-grid">
-                <div class="language-card glass-card-light">
-                    <div class="lang-info">
-                        <span class="lang-name">Nederlands</span>
-                        <span class="lang-level">Moedertaal</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 100%;"></div>
-                    </div>
-                </div>
-                <div class="language-card glass-card-light">
-                    <div class="lang-info">
-                        <span class="lang-name">Engels</span>
-                        <span class="lang-level">Goed</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="language-card glass-card-light">
-                    <div class="lang-info">
-                        <span class="lang-name">Italiaans</span>
-                        <span class="lang-level">Minimale Basis</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 15%;"></div>
-                    </div>
-                </div>
-                <div class="language-card glass-card-light">
-                    <div class="lang-info">
-                        <span class="lang-name">Frans</span>
-                        <span class="lang-level">Gemiddelde Basis</span>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 40%;"></div>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-subtitle">Portfolio Selectie</span>
+                <h2 class="section-title">Mijn Projecten</h2>
+                <p class="section-desc">Een selectie van schoolopdrachten en niet-schoolprojecten.</p>
             </div>
-        </div>
-    </section>
 
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <h2 class="section-title">Mijn <span class="gradient-text">Projecten</span></h2>
             <div class="projects-grid">
-                <article class="project-card glass-card-light">
-                    <img src="./img/portfolio.png" alt="Web Project" class="project-img">
-                    <div class="project-info">
-                        <h3>Portfolio Website</h3>
-                        <p class="project-meta">Vak: WPL 1 | Rol: Full Stack Developer</p>
-                        <p>Voor dit vak bouwde ik een responsive portfolio met Glassmorphism effecten.</p>
+
+                <!-- Project 1: Schoolproject (WPL) -->
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="./img/portfolio.png" alt="WPL1 Portfolio Website Preview">
+                        <span class="project-badge badge-school">Schoolproject</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3>WPL1 Digital Portfolio</h3>
+                        <p class="project-meta"><strong>Vak:</strong> Werkplekleren 1 | <strong>Rol:</strong> UI Designer & Front-End Developer</p>
+                        <p class="project-text">
+                            Volledig responsieve portfoliowebsite opgebouwd vanaf scratch conform webstandaarden, zonder frameworks. Inclusief reflectiedossier en interactieve componenten.
+                        </p>
                     </div>
                 </article>
-                <article class="project-card glass-card-light">
-                    <img src="./img/takeawaywebsite.png" alt="Design Project" class="project-img">
-                    <div class="project-info">
-                        <h3>Takeaway Website</h3>
-                        <p class="project-meta">Vak: Scripting | Rol: Full Stack Developer</p>
-                        <p>Responsive takeaway-website gebouwd met HTML, CSS en JavaScript voor het scriptingexamen.</p>
+
+                <!-- Project 2: Schoolproject (Scripting) -->
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="./img/takeawaywebsite.png" alt="Takeaway Applicatie Preview">
+                        <span class="project-badge badge-school">Schoolproject</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>JavaScript DOM</span>
+                            <span>JSON Data</span>
+                            <span>CSS Grid</span>
+                        </div>
+                        <h3>Takeaway Ordering App</h3>
+                        <p class="project-meta"><strong>Vak:</strong> Scripting 1 | <strong>Rol:</strong> Front-End Developer</p>
+                        <p class="project-text">
+                            Interactieve webapplicatie met dynamische productfiltering, winkelmand-functionaliteit en validatie gebouwd met pure vanilla JavaScript en asynchrone datastromen.
+                        </p>
                     </div>
                 </article>
-                <article class="project-card glass-card-light">
-                    <img src="./img/workoutimg.png" alt="Fitness Program" class="project-img">
-                    <div class="project-info">
-                        <h3>Personal Coaching Systeem</h3>
-                        <p class="project-meta">Persoonlijk Project | Rol: Coach & Organisator</p>
-                        <p>Krachttraining-schema's en voedingsbegeleiding op basis van anatomische kennis.</p>
+
+                <!-- Project 3: Niet-schoolproject / Fysiek & Organisatie -->
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="./img/workoutimg.png" alt="Fitness Programma & Begeleiding">
+                        <span class="project-badge badge-non-school">Niet-School / Vrij</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>Organisatie</span>
+                            <span>Coaching</span>
+                            <span>Analyse</span>
+                        </div>
+                        <h3>Personal Training & Coaching Framework</h3>
+                        <p class="project-meta"><strong>Context:</strong> Persoonlijk Project | <strong>Rol:</strong> Coach & Organisator</p>
+                        <p class="project-text">
+                            Ontwikkeling en coördinatie van trainingsschema's, data-analyse van progressie en persoonlijke coaching op basis van biomechanica en voedingsleer.
+                        </p>
                     </div>
                 </article>
+
             </div>
         </div>
     </section>
 
-    <section id="overige" class="extra-info-section">
+    <!-- VAARDIGHEDEN SECTIE -->
+    <section id="skills" class="section section-light">
         <div class="container">
-            <h2 class="section-title">Overige <span class="gradient-text">Informatie</span></h2>
-            <div class="extra-info-card glass-card-light">
-                <div class="info-row">
-                    <div class="info-icon-box"><i class="bi bi-car-front-fill"></i></div>
-                    <div class="info-text">
-                        <h3>Rijbewijs</h3>
-                        <p>In het bezit van rijbewijs categorie AM en B</p>
-                    </div>
-                </div>
-                <hr class="info-divider">
-                <div class="info-row">
-                    <div class="info-icon-box"><i class="bi bi-briefcase-fill"></i></div>
-                    <div class="info-text">
-                        <h3>Werkervaring</h3>
-                        <p>Horeca, Productie & Winkelbediende</p>
-                    </div>
-                </div>
-                <hr class="info-divider">
-                <div class="info-row">
-                    <div class="info-icon-box"><i class="bi bi-people-fill"></i></div>
-                    <div class="info-text">
-                        <h3>Persoonlijkheid</h3>
-                        <p>Communicatief sterk, sociaal ingesteld en een proactieve teamplayer.</p>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-subtitle">Toolkit & Expertise</span>
+                <h2 class="section-title">Vaardigheden</h2>
             </div>
-        </div>
-    </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Neem <span class="gradient-text">Contact Op</span></h2>
-            <div class="contact-card glass-card-light">
-                <div class="info-row">
-                    <div class="info-icon-box"><i class="bi bi-telephone-fill"></i></div>
-                    <div class="info-text">
-                        <h3>Telefoon</h3>
-                        <p>+32 485 55 03 97</p>
+            <div class="skills-wrapper">
+                <!-- Web Development -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="bi bi-code-square"></i>
+                        <h3>Development</h3>
                     </div>
+                    <ul class="skill-pill-list">
+                        <li><i class="bi bi-check-lg"></i> HTML5 (Semantisch)</li>
+                        <li><i class="bi bi-check-lg"></i> CSS3 / Grid & Flexbox</li>
+                        <li><i class="bi bi-check-lg"></i> Vanilla JavaScript (ES6+)</li>
+                        <li><i class="bi bi-check-lg"></i> Git & GitHub Version Control</li>
+                        <li><i class="bi bi-check-lg"></i> Responsive Web Design</li>
+                    </ul>
                 </div>
-                <hr class="info-divider">
-                <div class="info-row">
-                    <div class="info-icon-box"><i class="bi bi-envelope-fill"></i></div>
-                    <div class="info-text">
-                        <h3>E-mail</h3>
-                        <p>senne.baldoni@student.pxl.be</p>
+
+                <!-- Digital Design -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="bi bi-palette"></i>
+                        <h3>Design & UI/UX</h3>
                     </div>
+                    <ul class="skill-pill-list">
+                        <li><i class="bi bi-check-lg"></i> Adobe Photoshop</li>
+                        <li><i class="bi bi-check-lg"></i> Adobe Illustrator</li>
+                        <li><i class="bi bi-check-lg"></i> Adobe InDesign</li>
+                        <li><i class="bi bi-check-lg"></i> Figma Prototyping & Wireframing</li>
+                        <li><i class="bi bi-check-lg"></i> Brand Identity & Typography</li>
+                    </ul>
                 </div>
-                <hr class="info-divider">
-                <div class="info-row">
-                    <div class="info-icon-box"><i class="bi bi-link-45deg"></i></div>
-                    <div class="info-text">
-                        <h3>Social Media</h3>
-                        <div class="contact-socials">
-                            <a href="https://www.youtube.com/@cyloxdev" target="_blank" class="btn-social">YouTube</a>
-                            <a href="https://www.facebook.com/people/Senne-Baldoni/pfbid02E2EKitDmRStbv6DA9bkNcEzXAN1rq2vokCN1iRAnunQv313CdV3J4HecPHBBJnEkl/" target="_blank" class="btn-social">Facebook</a>
-                            <a href="https://www.instagram.com/sennebal/" target="_blank" class="btn-social">Instagram</a>
+
+                <!-- Talenkennis -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="bi bi-translate"></i>
+                        <h3>Talenkennis</h3>
+                    </div>
+                    <div class="language-progress-group">
+                        <div class="lang-item">
+                            <div class="lang-text"><span>Nederlands</span><span>Moedertaal</span></div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-text"><span>Engels</span><span>Vloeiend</span></div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-text"><span>Frans</span><span>Basis</span></div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 45%;"></div></div>
+                        </div>
+                        <div class="lang-item">
+                            <div class="lang-text"><span>Italiaans</span><span>Basis</span></div>
+                            <div class="bar-bg"><div class="bar-fill" style="width: 25%;"></div></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- SPECIALE SECTIE (VERPLICHT VOOR HEREXAMEN) -->
+    <section id="special" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Passies & Weetjes</span>
+                <h2 class="section-title">Buiten het Scherm</h2>
+                <p class="section-desc">Wat drijft mij naast codelijnen en canvas-pixels?</p>
+            </div>
+
+            <div class="special-cards-grid">
+                <div class="special-card">
+                    <div class="special-icon"><i class="bi bi-activity"></i></div>
+                    <h3>Fitness & Krachtsport</h3>
+                    <p>Krachttraining en bodybuilding vormen mijn dagelijkse routine. Het leert me structuur, focus en volharding om lange termijndoelen te realiseren.</p>
+                </div>
+
+                <div class="special-card">
+                    <div class="special-icon"><i class="bi bi-music-note-beamed"></i></div>
+                    <h3>Akoestische Gitaar</h3>
+                    <p>Muziek spelen is mijn creatieve uitlaatklep buiten het digitale werkveld. Het vraagt ritme, gevoel voor timing en geduldige vingerzetting.</p>
+                </div>
+
+                <div class="special-card">
+                    <div class="special-icon"><i class="bi bi-controller"></i></div>
+                    <h3>3D Design & Game Modding</h3>
+                    <p>Experimenteren met 3D-objecten en interactieve werelden via custom assets om technische functionaliteit te combineren met speelsheid.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTIE -->
+    <section id="contact" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Kennismaken?</span>
+                <h2 class="section-title">Neem Contact Op</h2>
+            </div>
+
+            <div class="contact-card-wrapper">
+                <div class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <div>
+                        <h4>E-mail</h4>
+                        <p><a href="mailto:senne.baldoni@student.pxl.be">senne.baldoni@student.pxl.be</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="bi bi-phone"></i>
+                    <div>
+                        <h4>Telefoon</h4>
+                        <p><a href="tel:+32485550397">+32 485 55 03 97</a></p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <div>
+                        <h4>Locatie</h4>
+                        <p>Borgloon / Hasselt, Limburg</p>
+                    </div>
+                </div>
+
+                <div class="social-links-row">
+                    <a href="https://www.linkedin.com/in/senne-baldoni-3254b7349/" target="_blank" rel="noopener" class="social-btn"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                    <a href="https://www.instagram.com/sennebal/" target="_blank" rel="noopener" class="social-btn"><i class="bi bi-instagram"></i> Instagram</a>
+                    <a href="https://www.youtube.com/@cyloxdev" target="_blank" rel="noopener" class="social-btn"><i class="bi bi-youtube"></i> YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
 
-<footer class="glass-footer">
-    <div class="footer-content">
-        <p>&copy; 2024 Senne Baldoni. Alle rechten voorbehouden.</p>
-        <a href="#" class="privacy-link">Privacybeleid</a>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-container">
+        <p>&copy; 2026 Senne Baldoni — Graduaat Digitale Vormgeving (Hogeschool PXL).</p>
+        <div class="footer-links">
+            <a href="privacy.txt" target="_blank">Privacyverklaring</a>
+            <a href="./portfolio/index.html">Reflectieverslag</a>
+            <a href="#home">Naar boven <i class="bi bi-arrow-up"></i></a>
+        </div>
     </div>
 </footer>
 
